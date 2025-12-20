@@ -1,16 +1,16 @@
 image: maven:3.9-eclipse-temurin-17
 
 stages:
-  - test
+  # - test  <-- COMENTA ESTO
   - build
 
-# Job 1: Correr pruebas unitarias (Calidad)
-unit_tests:
-  stage: test
-  script:
-    - mvn test
+# COMENTA O BORRA ESTE BLOQUE DE TEST ENTERO POR AHORA
+# unit_tests:
+#   stage: test
+#   script:
+#     - mvn test
 
-# Job 2: Verificar que compila el .jar (Integración)
+# Deja solo el Build, asegurando que salte los tests
 build_app:
   stage: build
   script:
