@@ -2,6 +2,7 @@ FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
+RUN find target -name "*.jar" -not -name "*-plain.jar" -exec mv {} target/app.jar \;
 FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/target/app.jar app.jar
