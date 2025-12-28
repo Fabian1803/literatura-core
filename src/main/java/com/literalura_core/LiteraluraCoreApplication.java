@@ -13,7 +13,6 @@ public class LiteraluraCoreApplication {
 		SpringApplication.run(LiteraluraCoreApplication.class, args);
 	}
 
-	// AQUI ADENTRO va la configuración, antes de cerrar la clase
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
@@ -25,5 +24,4 @@ public class LiteraluraCoreApplication {
 			}
 		};
 	}
-
-} // <--- La llave de cierre va AL FINAL
+}
