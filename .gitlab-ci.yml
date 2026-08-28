@@ -1,16 +1,8 @@
 image: maven:3.9-eclipse-temurin-21
 
 stages:
-  # - test  <-- COMENTA ESTO
   - build
 
-# COMENTA O BORRA ESTE BLOQUE DE TEST ENTERO POR AHORA
-# unit_tests:
-#   stage: test
-#   script:
-#     - mvn test
-
-# Deja solo el Build, asegurando que salte los tests
 build_app:
   stage: build
   script:

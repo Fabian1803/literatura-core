@@ -4,6 +4,14 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Environment & OS ###
+.env
+.env.*
+!.env.example
+.DS_Store
+*.DS_Store
+Thumbs.db
+
 ### STS ###
 .apt_generated
 .classpath

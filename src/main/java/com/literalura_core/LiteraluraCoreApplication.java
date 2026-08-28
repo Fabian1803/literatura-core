@@ -19,7 +19,7 @@ public class LiteraluraCoreApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("*") // CAMBIO TEMPORAL: Aceptamos todo para probar
+						.allowedOrigins("*")
 						.allowedMethods("*");
 			}
 		};

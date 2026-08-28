@@ -26,7 +26,6 @@ public class GutendexAdapter implements LibreriaExternaPort {
             return datosApi.resultados().stream()
                     .findFirst()
                     .map(dto -> {
-                        // Obtenemos el primer autor (o null si no hay)
                         var autorDto = dto.autores().isEmpty() ? null : dto.autores().get(0);
                         return new Libro(
                                 dto.titulo(),
